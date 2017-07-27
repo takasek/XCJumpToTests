@@ -24,8 +24,8 @@ on run
 		# display dialog destinationName
 		
 		# ファイルパスを探して開く
-		set command to "/usr/bin/mdfind -onlyin " & quoted form of projectFolder & " -name " & quoted form of destinationName
 		# display dialog command
+		set command to "find " & quoted form of projectFolder & " -name " & quoted form of destinationName
 		set destinationPath to do shell script command
 		if length of destinationPath > 0 then
 			open destinationPath
