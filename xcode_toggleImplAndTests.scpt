@@ -32,9 +32,7 @@ on run
 		set destinationPath to do shell script command
 		if length of destinationPath < 1 then
 			set destinationName to (my replaceThis:(w1 & ".*") inString:sourceName usingThis:w3)
-            display dialog destinationName
 			set command to "find " & quoted form of projectFolder & " -name " & quoted form of destinationName
-			display dialog command
 			set destinationPath to do shell script command
 		end if
 		if length of destinationPath > 0 then
