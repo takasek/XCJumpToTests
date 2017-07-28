@@ -16,8 +16,11 @@ on run
 		# Hoge.swift ⇄ HogeTests.swift のトグル変換
 		set w1 to ".swift"
 		set w2 to "Tests.swift"
+		set w3 to "Spec.swift"
 		if sourceName contains w2 then
 			set destinationName to (my replaceThis:(w2 & ".*") inString:sourceName usingThis:w1)
+		else if sourceName contains w3 then
+			set destinationName to (my replaceThis:(w3 & ".*") inString:sourceName usingThis:w1)
 		else
 			set destinationName to (my replaceThis:(w1 & ".*") inString:sourceName usingThis:w2)
 		end if
@@ -27,6 +30,11 @@ on run
 		# display dialog command
 		set command to "find " & quoted form of projectFolder & " -name " & quoted form of destinationName
 		set destinationPath to do shell script command
+		if length of destinationPath < 1 then
+			set destinationName to (my replaceThis:(w1 & ".*") inString:sourceName usingThis:w3)
+			set command to "find " & quoted form of projectFolder & " -name " & quoted form of destinationName
+			set destinationPath to do shell script command
+		end if
 		if length of destinationPath > 0 then
 			open destinationPath
 		else
