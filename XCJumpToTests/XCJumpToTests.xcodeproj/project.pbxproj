@@ -17,6 +17,7 @@
 		B6394DC41FD3BE2600B6AA9D /* XcodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B6394DC31FD3BE2600B6AA9D /* XcodeHelper.m */; };
 		B6394DC61FD3BE2600B6AA9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6394DC51FD3BE2600B6AA9D /* main.m */; };
 		B6394DCA1FD3BE2600B6AA9D /* XcodeHelper.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = B6394DBF1FD3BE2600B6AA9D /* XcodeHelper.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B6394DD21FD3BE5C00B6AA9D /* XcodeHelper.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = B6394DBF1FD3BE2600B6AA9D /* XcodeHelper.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,16 @@
 				B6394DCA1FD3BE2600B6AA9D /* XcodeHelper.xpc in Embed XPC Services */,
 			);
 			name = "Embed XPC Services";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6394DD11FD3BE5700B6AA9D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				B6394DD21FD3BE5C00B6AA9D /* XcodeHelper.xpc in CopyFiles */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -203,6 +214,7 @@
 				B6394DA51FD3BDC500B6AA9D /* Sources */,
 				B6394DA61FD3BDC500B6AA9D /* Frameworks */,
 				B6394DA71FD3BDC500B6AA9D /* Resources */,
+				B6394DD11FD3BE5700B6AA9D /* CopyFiles */,
 			);
 			buildRules = (
 			);
