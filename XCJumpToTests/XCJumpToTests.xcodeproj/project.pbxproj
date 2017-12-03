@@ -92,6 +92,7 @@
 		B6394DC51FD3BE2600B6AA9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B6394DC71FD3BE2600B6AA9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6394DD31FD3BE9F00B6AA9D /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		B6394DD41FD3BEC800B6AA9D /* Xcode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Xcode.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				B6394DC11FD3BE2600B6AA9D /* XcodeHelperProtocol.h */,
+				B6394DD41FD3BEC800B6AA9D /* Xcode.h */,
 				B6394DC21FD3BE2600B6AA9D /* XcodeHelper.h */,
 				B6394DC31FD3BE2600B6AA9D /* XcodeHelper.m */,
 				B6394DC51FD3BE2600B6AA9D /* main.m */,
