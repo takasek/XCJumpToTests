@@ -91,6 +91,7 @@
 		B6394DC31FD3BE2600B6AA9D /* XcodeHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XcodeHelper.m; sourceTree = "<group>"; };
 		B6394DC51FD3BE2600B6AA9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B6394DC71FD3BE2600B6AA9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6394DD31FD3BE9F00B6AA9D /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +166,7 @@
 			children = (
 				B6394DAE1FD3BDC500B6AA9D /* SourceEditorExtension.swift */,
 				B6394DB01FD3BDC500B6AA9D /* SourceEditorCommand.swift */,
+				B6394DD31FD3BE9F00B6AA9D /* BridgingHeader.h */,
 				B6394DB21FD3BDC500B6AA9D /* Info.plist */,
 				B6394DB31FD3BDC500B6AA9D /* Extension.entitlements */,
 			);
@@ -518,6 +520,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.takasek.XCJumpToTests.Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = Extension/BridgingHeader.h;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -534,6 +537,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.takasek.XCJumpToTests.Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = Extension/BridgingHeader.h;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -545,7 +549,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 42U7855PYX;
 				INFOPLIST_FILE = XcodeHelper/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.takasek.XcodeHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.takasek.XCJumpToTests.XcodeHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -558,7 +562,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 42U7855PYX;
 				INFOPLIST_FILE = XcodeHelper/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.takasek.XcodeHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.takasek.XCJumpToTests.XcodeHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
