@@ -14,6 +14,9 @@
 		B6394DAF1FD3BDC500B6AA9D /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6394DAE1FD3BDC500B6AA9D /* SourceEditorExtension.swift */; };
 		B6394DB11FD3BDC500B6AA9D /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6394DB01FD3BDC500B6AA9D /* SourceEditorCommand.swift */; };
 		B6394DB61FD3BDC500B6AA9D /* Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B6394DA91FD3BDC500B6AA9D /* Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B6394DC41FD3BE2600B6AA9D /* XcodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B6394DC31FD3BE2600B6AA9D /* XcodeHelper.m */; };
+		B6394DC61FD3BE2600B6AA9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6394DC51FD3BE2600B6AA9D /* main.m */; };
+		B6394DCA1FD3BE2600B6AA9D /* XcodeHelper.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = B6394DBF1FD3BE2600B6AA9D /* XcodeHelper.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +26,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = B6394DA81FD3BDC500B6AA9D;
 			remoteInfo = Extension;
+		};
+		B6394DC81FD3BE2600B6AA9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B6394D8C1FD3BD4E00B6AA9D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B6394DBE1FD3BE2600B6AA9D;
+			remoteInfo = XcodeHelper;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -36,6 +46,17 @@
 				B6394DB61FD3BDC500B6AA9D /* Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6394DCE1FD3BE2600B6AA9D /* Embed XPC Services */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				B6394DCA1FD3BE2600B6AA9D /* XcodeHelper.xpc in Embed XPC Services */,
+			);
+			name = "Embed XPC Services";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -53,6 +74,12 @@
 		B6394DB01FD3BDC500B6AA9D /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
 		B6394DB21FD3BDC500B6AA9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6394DB31FD3BDC500B6AA9D /* Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Extension.entitlements; sourceTree = "<group>"; };
+		B6394DBF1FD3BE2600B6AA9D /* XcodeHelper.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = XcodeHelper.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6394DC11FD3BE2600B6AA9D /* XcodeHelperProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XcodeHelperProtocol.h; sourceTree = "<group>"; };
+		B6394DC21FD3BE2600B6AA9D /* XcodeHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XcodeHelper.h; sourceTree = "<group>"; };
+		B6394DC31FD3BE2600B6AA9D /* XcodeHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XcodeHelper.m; sourceTree = "<group>"; };
+		B6394DC51FD3BE2600B6AA9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B6394DC71FD3BE2600B6AA9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +98,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B6394DBC1FD3BE2600B6AA9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -79,6 +113,7 @@
 			children = (
 				B6394D961FD3BD4E00B6AA9D /* XCJumpToTests */,
 				B6394DAD1FD3BDC500B6AA9D /* Extension */,
+				B6394DC01FD3BE2600B6AA9D /* XcodeHelper */,
 				B6394DAA1FD3BDC500B6AA9D /* Frameworks */,
 				B6394D951FD3BD4E00B6AA9D /* Products */,
 			);
@@ -89,6 +124,7 @@
 			children = (
 				B6394D941FD3BD4E00B6AA9D /* XCJumpToTests.app */,
 				B6394DA91FD3BDC500B6AA9D /* Extension.appex */,
+				B6394DBF1FD3BE2600B6AA9D /* XcodeHelper.xpc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,6 +160,18 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		B6394DC01FD3BE2600B6AA9D /* XcodeHelper */ = {
+			isa = PBXGroup;
+			children = (
+				B6394DC11FD3BE2600B6AA9D /* XcodeHelperProtocol.h */,
+				B6394DC21FD3BE2600B6AA9D /* XcodeHelper.h */,
+				B6394DC31FD3BE2600B6AA9D /* XcodeHelper.m */,
+				B6394DC51FD3BE2600B6AA9D /* main.m */,
+				B6394DC71FD3BE2600B6AA9D /* Info.plist */,
+			);
+			path = XcodeHelper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,11 +183,13 @@
 				B6394D911FD3BD4E00B6AA9D /* Frameworks */,
 				B6394D921FD3BD4E00B6AA9D /* Resources */,
 				B6394DBA1FD3BDC500B6AA9D /* Embed App Extensions */,
+				B6394DCE1FD3BE2600B6AA9D /* Embed XPC Services */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				B6394DB51FD3BDC500B6AA9D /* PBXTargetDependency */,
+				B6394DC91FD3BE2600B6AA9D /* PBXTargetDependency */,
 			);
 			name = XCJumpToTests;
 			productName = XCJumpToTests;
@@ -163,6 +213,23 @@
 			productReference = B6394DA91FD3BDC500B6AA9D /* Extension.appex */;
 			productType = "com.apple.product-type.xcode-extension";
 		};
+		B6394DBE1FD3BE2600B6AA9D /* XcodeHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6394DCB1FD3BE2600B6AA9D /* Build configuration list for PBXNativeTarget "XcodeHelper" */;
+			buildPhases = (
+				B6394DBB1FD3BE2600B6AA9D /* Sources */,
+				B6394DBC1FD3BE2600B6AA9D /* Frameworks */,
+				B6394DBD1FD3BE2600B6AA9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XcodeHelper;
+			productName = XcodeHelper;
+			productReference = B6394DBF1FD3BE2600B6AA9D /* XcodeHelper.xpc */;
+			productType = "com.apple.product-type.xpc-service";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -178,6 +245,10 @@
 						ProvisioningStyle = Automatic;
 					};
 					B6394DA81FD3BDC500B6AA9D = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					B6394DBE1FD3BE2600B6AA9D = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
@@ -198,6 +269,7 @@
 			targets = (
 				B6394D931FD3BD4E00B6AA9D /* XCJumpToTests */,
 				B6394DA81FD3BDC500B6AA9D /* Extension */,
+				B6394DBE1FD3BE2600B6AA9D /* XcodeHelper */,
 			);
 		};
 /* End PBXProject section */
@@ -213,6 +285,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B6394DA71FD3BDC500B6AA9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6394DBD1FD3BE2600B6AA9D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -239,6 +318,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B6394DBB1FD3BE2600B6AA9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6394DC61FD3BE2600B6AA9D /* main.m in Sources */,
+				B6394DC41FD3BE2600B6AA9D /* XcodeHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -246,6 +334,11 @@
 			isa = PBXTargetDependency;
 			target = B6394DA81FD3BDC500B6AA9D /* Extension */;
 			targetProxy = B6394DB41FD3BDC500B6AA9D /* PBXContainerItemProxy */;
+		};
+		B6394DC91FD3BE2600B6AA9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B6394DBE1FD3BE2600B6AA9D /* XcodeHelper */;
+			targetProxy = B6394DC81FD3BE2600B6AA9D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -433,6 +526,32 @@
 			};
 			name = Release;
 		};
+		B6394DCC1FD3BE2600B6AA9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 42U7855PYX;
+				INFOPLIST_FILE = XcodeHelper/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.takasek.XcodeHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B6394DCD1FD3BE2600B6AA9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 42U7855PYX;
+				INFOPLIST_FILE = XcodeHelper/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.takasek.XcodeHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -459,6 +578,15 @@
 			buildConfigurations = (
 				B6394DB81FD3BDC500B6AA9D /* Debug */,
 				B6394DB91FD3BDC500B6AA9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6394DCB1FD3BE2600B6AA9D /* Build configuration list for PBXNativeTarget "XcodeHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6394DCC1FD3BE2600B6AA9D /* Debug */,
+				B6394DCD1FD3BE2600B6AA9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
